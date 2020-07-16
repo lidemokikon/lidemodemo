@@ -1,0 +1,13 @@
+body{
+text-align: center;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+position: absolute;
+}
+p{
+justify-content: center;
+align-items: center;
+font-weight: bold;
+position: absolute;
+}
