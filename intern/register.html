@@ -25,55 +25,39 @@
     
   </style>
   <body>
-    <form id="my-form" name="myform" action="#"  >
+   <form id="my-form" name="myform" action="#"  >
     <h3>submit</h3>
  <div class="container">
-  <span id="error"></span>
+
       <label for="name">Name</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="uname">
+      <span id="error"></span>
       <label for="password">password</label>
-      <input type="password" name="password" id="password">
-      <label for="mail">email</label>
-      <input type="varchar" name="email" id="email">
-      <button type="submit" id="btn-submit">register</button>
+      <input type="password" name="password" id="pass">
+      <label for="email">email</label>
+      <input type="varchar" name="email" id="mail">
+      <button onclick="validate()" type="submit" id="btn-submit">register</button>
  </div>
 </form>
-      <script>
-    var myform= document.forms.myform;
-     var name= document.getElementById("name");
-     var password= document.getElementById("password");
-     var email= document.getElementById("email");
-     var message= document.getElementById("error");
+     
+     <script>
+      function validate()
+       {
+        var name= document.getElementById("uname");
+        var password= document.getElementById("pass");
+        var email= document.getElementById("mail");
 
-     myform.onsubmit= function(){
-
-       if(myform.name.value==""){
-         message.innerHTML="please enter a name";
-         return false;
+        
+       if(name.value=="" || password.value=="" || email.value=="")
+       {
+         alert("no blank space allowed")
        }
        else{
-         message.innerHTML="";
-         return true;
-       }
-       if(myform.password.value==""){
-         message.innerHTML="please enter a password";
-         return false;
-       }
-       else{
-         message.innerHTML="";
-         return true;
-       }
-       if(myform.email.value==""){
-         message.innerHTML="please enter a email";
-         return false;
-       }
-       else{
-         message.innerHTML="";
-         return true;
-       }
 
-     };
+       }
+       }
     
+     
       </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
