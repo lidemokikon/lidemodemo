@@ -28,7 +28,7 @@
     <form id="my-form" name="myform" action="#"  >
     <h3>submit</h3>
  <div class="container">
-  
+  <span id="error"></span>
       <label for="name">Name</label>
       <input type="text" name="name" id="name">
       <label for="password">password</label>
@@ -43,7 +43,7 @@
      var name= document.getElementById("name");
      var password= document.getElementById("password");
      var email= document.getElementById("email");
-     var message= document.getElementById("btn-submit");
+     var message= document.getElementById("error");
 
      myform.onsubmit= function(){
 
